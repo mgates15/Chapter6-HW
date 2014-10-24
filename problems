@@ -124,3 +124,60 @@ public class OutputTest {
 }
 
 9. 
+
+This is the original code:
+
+import java.math.*;
+
+public class OutputTest4 {
+	
+	public static void main(String args[]) {
+		
+		final double g = 16.0;
+		double t = 35.5;
+		System.out.print("The travel distance is ");
+		System.out.println(1 / 2 * (g * t * t));
+		
+	}
+}
+
+The output is the following:
+
+The travel distance is 0.0
+
+So, the code needs to be modified to the following:
+
+import java.math.*;
+
+public class OutputTest4 {
+	
+	public static void main(String args[]) {
+		
+		final double g =  16.0;
+		double t =  35.5;
+		System.out.print("The travel distance is ");
+		System.out.println(1.0 / 2 * (g * t * t));
+		
+	}
+}
+
+And the output is: 
+
+The travel distance is 10082.0
+
+12.
+
+The issue in this code is the fact that temp is an int, and when they are switched, temp will take the int value of 
+of the double. So, the code should be modified to 
+
+double a,b;
+double temp;
+...
+
+or, for an even shorter amount of code:
+
+double temp, a, b;
+
+This also functions the same way.
+
+16. 
