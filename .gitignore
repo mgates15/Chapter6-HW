@@ -1,0 +1,126 @@
+6. 
+
+Code:
+
+import java.math.*;
+
+public class OutputTest1 {
+	
+	public static void main(String args[]){
+			System.out.println(5 / 10);
+			System.out.println(1 / 2 * 10);
+			System.out.println(1.0 / 2 * 10);
+			System.out.println(1 / 2.0 * 10);
+			System.out.println(13 % 5);
+	}
+}
+
+Output:
+
+0
+0
+5.0
+5.0
+3
+
+7a.
+
+Code:
+
+import java.math.*;
+
+public class OutputTest2 {
+	
+	public static void main(String args[]){
+			double rate = 1.058;
+			int balance0 = 100, balance = (int)(balance0 * rate);
+			System.out.println(balance);
+	}
+}
+
+Output:
+105
+
+7b. 
+
+Code:
+
+import java.math.*;
+
+public class OutputTest2 {
+	
+	public static void main(String args[]){
+			int miles = 98, gallons = 5;
+			double gasMileage = miles/ gallons;
+			System.out.println(gasMileage);
+	}
+}
+
+Output:
+19.0
+
+8. 
+
+I tested this by writing a program that would calculate count, and if it returned the same value with fewer partheses,
+then those parentheses were therefore unnecessary.
+
+Origianl Code:
+
+import java.math.*;
+
+public class OutputTest {
+	
+	
+	public static int thing(int count, int total, int pages, int words) {
+		count += (((total / pages) - 5) * words - 1);
+			return count;
+	}
+	
+	public static void main (String args[]){
+		
+		OutputTest newthing = new OutputTest();
+		System.out.println(newthing.thing(2,10,1,5));
+	}
+}
+
+The output was 26.
+
+The output of this code was also 26 meaning it also functioned with fewer parentheses:
+
+import java.math.*;
+
+public class OutputTest {
+	
+	
+	public static int thing(int count, int total, int pages, int words) {
+		count += (((total / pages) - 5) * words - 1);
+			return count;
+	}
+	
+	public static void main (String args[]){
+		
+		OutputTest newthing = new OutputTest();
+		System.out.println(newthing.thing(2,10,1,5));
+	}
+}
+
+The output of this code was -14, meaning it did not function without the parentheses:
+
+import java.math.*;
+
+public class OutputTest {
+	
+	
+	public static int thing(int count, int total, int pages, int words) {
+		count += (total / pages) - 5 * words - 1;
+			return count;
+	}
+	
+	public static void main (String args[]){
+		
+		OutputTest newthing = new OutputTest();
+		System.out.println(newthing.thing(2,10,1,5));
+	}
+}
+
+9. 
