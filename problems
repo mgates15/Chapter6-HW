@@ -181,3 +181,11 @@ double temp, a, b;
 This also functions the same way.
 
 16. 
+
+The code that should be added is the following: 
+
+	double kg;
+	double m;
+	kg = (double)(lbs * 0.454);
+	m = (double)(inches * 0.0254);
+	return kg / (m * m);
